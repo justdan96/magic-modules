@@ -1476,6 +1476,8 @@ resource "google_container_node_pool" "np_with_node_config" {
     preemptible      = true
     min_cpu_platform = "Intel Broadwell"
 
+	tags = ["google"]
+
     taint {
       key    = "taint_key"
       value  = "taint_value"
@@ -1519,6 +1521,8 @@ resource "google_container_node_pool" "np_with_node_config" {
     ]
     preemptible      = true
     min_cpu_platform = "Intel Broadwell"
+
+	tags = ["google", "node-pool"]
 
     taint {
       key    = "taint_key"
